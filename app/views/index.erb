@@ -1,0 +1,19 @@
+<h1>你好~</h1>
+<p><%= time%></p>
+
+<table class="table">
+  <tr>
+    <th>标 题</th>
+    <th>内容摘要</th>
+    <th>创建时间</th>
+    <th>操 作</th>
+  </tr>
+  <% @blogs.each do |blog|%>
+  <tr>
+    <td><%= blog.title%></td>
+    <td><%= blog.content[0..40]%></td>
+    <td><%= blog.created_at%></td>
+    <td></td>
+  </tr>
+  <% end %>
+</table>
